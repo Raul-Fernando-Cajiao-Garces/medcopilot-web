@@ -186,6 +186,7 @@ export const ConsultationDetailPage: FC = () => {
         <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', marginBottom: '0.75rem' }}>
           <p>🌡️ Temperatura: <strong>{consultation.temperature}°C</strong></p>
           <p>⚡ Escala EVA de Dolor: <strong>{consultation.painLevel}/10</strong></p>
+          <p>⏱️ Tiempo de evolución: <strong>{consultation.dias ?? 1} días</strong></p>
           <p>🚨 Clasificación de Triaje: <strong>{consultation.triagePriority}</strong></p>
         </div>
         <p style={{ fontSize: '0.95rem' }}>

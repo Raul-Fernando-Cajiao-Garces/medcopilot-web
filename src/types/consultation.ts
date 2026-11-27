@@ -12,6 +12,7 @@ export interface Consultation {
   symptoms: string;
   temperature: number;
   painLevel: number;
+  dias?: number;
   proposedIndications: string;
   triagePriority: TriagePriority;
   metabolicAlerts: string;
@@ -29,6 +30,7 @@ export interface CreateConsultationInput {
   symptoms: string;
   temperature: number;
   painLevel: number;
+  dias?: number;
   proposedIndications?: string;
   doctorNotes?: string;
 }
