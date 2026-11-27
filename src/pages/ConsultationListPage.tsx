@@ -183,6 +183,7 @@ export const ConsultationListPage: FC = () => {
               >
                 <span>🌡️ Temp: <strong>{consultation.temperature}°C</strong></span>
                 <span>⚡ Dolor EVA: <strong>{consultation.painLevel}/10</strong></span>
+                <span>⏱️ Evolución: <strong>{consultation.dias ?? 1} días</strong></span>
                 <span>📅 Fecha: <strong>{new Date(consultation.createdAt).toLocaleDateString('es-EC')}</strong></span>
               </div>
 

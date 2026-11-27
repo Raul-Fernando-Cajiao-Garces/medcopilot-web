@@ -23,6 +23,7 @@ export const CreateConsultationPage: FC = () => {
   const [symptoms, setSymptoms] = useState<string>('');
   const [temperature, setTemperature] = useState<string>('36.5');
   const [painLevel, setPainLevel] = useState<string>('3');
+  const [dias, setDias] = useState<string>('1');
   const [proposedIndications, setProposedIndications] = useState<string>('');
 
   // Estados de envío y error
@@ -101,6 +102,7 @@ export const CreateConsultationPage: FC = () => {
         symptoms: symptoms.trim(),
         temperature: tempNum,
         painLevel: painNum,
+        dias: Number(dias) || 1,
         proposedIndications: proposedIndications.trim(),
       });
 
@@ -269,6 +271,23 @@ export const CreateConsultationPage: FC = () => {
               onChange={(e) => setPainLevel(e.target.value)}
               required
               aria-label="Escala de dolor de 0 a 10"
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="dias-input" className="form-label">
+              ⏱️ ¿Cuántos días lleva con estos síntomas? (*):
+            </label>
+            <input
+              id="dias-input"
+              type="number"
+              min="0"
+              max="365"
+              className="form-control"
+              value={dias}
+              onChange={(e) => setDias(e.target.value)}
+              required
+              aria-label="Días de evolución de los síntomas"
             />
           </div>
         </div>
